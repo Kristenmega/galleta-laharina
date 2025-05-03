@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu fortuna dulce</title>
+    <style>
+        body {
+            background-color: #f8f4ed;
+            font-family: 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #4b3f2f;
+        }
+        .frase {
+            font-size: 1.8rem;
+            margin: 0 20px;
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #a08c76;
+        }
+        .icono {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="icono">🍪</div>
+    <div class="frase" id="frase"></div>
+    <div class="footer">@laharina · comparte tu suerte con #galletadeldía</div>
+
+    <script>
+        const frases = ['Esta galleta fue hecha para alguien brillante como tú.', 'Hoy te va a ir tan bien como saben estas galletas.', 'Tu ternura tiene superpoderes. No lo olvides.', 'Alguien piensa en ti mientras lees esto.', 'Lo bonito que das, vuelve. A veces, en forma de galleta.', 'Sonríe, lo dulce siempre encuentra su camino.', 'Tu energía bonita se nota a kilómetros.', 'Hazte caso. También te mereces cosas ricas.', 'Eres magia. De la que huele a recién horneado.', 'Una mordida y todo mejora.', 'Este no es un antojo, es una señal del universo.', 'Si estás leyendo esto, mereces otra galleta.', 'Tu dulzura no se hornea, viene de serie.', 'Hecha con amor… como tú.', 'Las cosas buenas llegan en bolsitas de papel y azúcar.'];
+        const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+        document.getElementById('frase').innerText = fraseAleatoria;
+    </script>
+</body>
+</html>
