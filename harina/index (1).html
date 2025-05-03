@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagen Aleatoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <img id="randomImage" src="" alt="Imagen aleatoria">
+
+    <script>
+        const imageCount = 24;  // Total de imágenes
+        const imageFolder = 'images';  // Asegúrate de que las imágenes estén en una carpeta llamada 'images' en tu repositorio de GitHub
+        
+        function getRandomImage() {
+            const randomNumber = Math.floor(Math.random() * imageCount) + 1;  // Genera un número aleatorio entre 1 y 24
+            return `${imageFolder}/${randomNumber}.png`;  // Devuelve la URL de la imagen
+        }
+        
+        // Asignar la imagen aleatoria al src del img
+        document.getElementById('randomImage').src = getRandomImage();
+    </script>
+
+</body>
+</html>
